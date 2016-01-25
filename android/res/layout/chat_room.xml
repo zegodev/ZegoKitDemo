@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:orientation="horizontal" >
+
+          <Button
+              android:id="@+id/btnSpeaker"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="关扬声器" />
+
+          <Button
+              android:id="@+id/btnMic"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="关Mic" />
+
+          <Button
+              android:id="@+id/btnUserListInfo"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="成员列表" />
+
+ 
+              
+		<Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+           </LinearLayout>
+         <LinearLayout
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:orientation="horizontal" >
+			<Button
+              android:id="@+id/btnPause"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="暂停" />
+		</LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewShowMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.40"
+        android:maxLines="30"
+        android:scrollbars="vertical"
+        android:singleLine="false" />
+    
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal" >
+            
+        <EditText
+            android:id="@+id/editMsg"
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+            android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnSendMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.13"
+        android:text="发送" />
+
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="退出" />
+            
+      </LinearLayout>
+
+    
+
+</LinearLayout>
