@@ -11,6 +11,12 @@
     NSString *strUserID;
     NSString *strUserName;
     AVRoom* avRoom;
+    bool bAux;
+    bool bRecord;
+    NSData *auxData;
+    unsigned char *pPos;
+    unsigned char *pData;
+    FILE *fd;
 }
 @property (weak, nonatomic) IBOutlet UITextView *tvShowMsg;
 @property (weak, nonatomic) IBOutlet UITextField *editSendMsg;
@@ -19,6 +25,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnEnableMic;
 @property (weak, nonatomic) IBOutlet UIButton *btnPause;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnAux;
+@property (weak, nonatomic) IBOutlet UIButton *btnRecord;
 @end
 
 @implementation ChatRoomViewController
@@ -101,6 +109,43 @@
     //[self.editSendMsg resignFirstResponder];
 }
 
+- (IBAction)aux:(id)sender {
+    bAux = !bAux;
+    [avRoom EnableAux:bAux];
+    pPos = pData;
+    if (bAux)
+        [self.btnAux setTitle:@"关伴奏" forState:UIControlStateNormal];
+    else
+        [self.btnAux setTitle:@"开伴奏" forState:UIControlStateNormal];
+}
+
+- (IBAction)recorder:(id)sender {
+    bRecord = !bRecord;
+    [avRoom EnableRecorder:bRecord];
+    if (bRecord){
+        if (!fd){
+            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+            NSString *cachesDir = [paths objectAtIndex:0];
+            NSFileManager *fileManager = [NSFileManager defaultManager];
+            NSString *recodeFile = [cachesDir stringByAppendingPathComponent:@"zegoRecord"];
+            [fileManager removeItemAtPath:recodeFile error:nil];
+            [fileManager createFileAtPath:recodeFile contents:nil attributes:nil];
+            
+            char * pFile = (char*)[recodeFile UTF8String];
+            fd = fopen(pFile,"ab+");
+        }
+        [self.btnRecord setTitle:@"关录音" forState:UIControlStateNormal];
+    }
+    else
+    {
+        if (fd) {
+            fclose(fd);
+            fd = NULL;
+        }
+        [self.btnRecord setTitle:@"开录音" forState:UIControlStateNormal];
+    }
+}
+
 - (void) setMNotifEntity:(NotificationEntity *)mNotify
 {
     _mNotifEntity = mNotify;
@@ -113,7 +158,12 @@
     strRoomKey = [self.mNotifEntity strRoomKey];
     strUserID = [self.mNotifEntity strUserID];
     strUserName = [self.mNotifEntity strUserName];
+    bAux = false;
     //NSLog(@"testlog");
+    NSURL *url=[[NSBundle mainBundle]URLForResource:@"a.pcm" withExtension:nil];
+    auxData = [NSData dataWithContentsOfURL:url options:0 error:nil];
+    pData = (unsigned char *)[auxData bytes];
+    pPos = pData;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -168,7 +218,7 @@
     self.btnSend.frame = btnSendFrame;
     
     CGRect tvShowMsgFrame = self.tvShowMsg.frame;
-    tvShowMsgFrame.size.height = currentScreen.applicationFrame.size.height - editSendMsgFrame.size.height - 120;
+    tvShowMsgFrame.size.height = currentScreen.applicationFrame.size.height - editSendMsgFrame.size.height - 160;
     self.tvShowMsg.frame = tvShowMsgFrame;
 
 }
@@ -228,6 +278,10 @@
     [super viewWillDisappear:animated];
     [avRoom SetCallback:nil callbackQueue:nil];
     [avRoom LeaveRoom];
+    if (fd) {
+        fclose(fd);
+        fd = NULL;
+    }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
@@ -334,6 +388,40 @@
 {
     NSString* strTip  = [NSString stringWithFormat:@"掉线了，可能是网络问题，处理好网络问题可以调用ReGetInRoom"];
     [CoolxSdkDemoHelp ShowToast:strTip];
+}
+
+- (void) OnAuxCallback:(unsigned char *)pDataOut DataLen:(int*)pDataLen SampleRate:(int*)pSampleRate NumChannels:(int*)pNumChannels BitDepth:(int*)pBitDepth
+{
+    if(auxData)
+    {
+        int nLen = (int)[auxData length];
+        
+        int nLeftLen = (int)(pData + nLen - pPos);
+        if (nLeftLen < *pDataLen) {
+            pPos = pData;
+            *pDataLen = 0;
+            return;
+        }
+        
+        pPos = pPos + *pDataLen;
+
+        *pSampleRate = 44100;
+        *pNumChannels = 2;
+        *pBitDepth = 16;
+            
+        memcpy(pDataOut, pPos, *pDataLen);
+    }
+}
+
+- (void) OnRecorderCallback:(NSData*)data SampleRate:(int)sampleRate Channels:(int)channels BitDepth:(int)bitDepth
+{
+    NSLog(@"OnRecorderCallback Len = %d", (int)[data length]);
+    if (fd)
+    {
+        Byte* pBytes = (Byte*)[data bytes];
+        int nLen = (int)[data length];
+        fwrite(pBytes, nLen, 1, fd);
+    }
 }
 
 - (void) ShowMSG:(NSString*)strMsg
