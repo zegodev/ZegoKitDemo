@@ -102,6 +102,8 @@ typedef enum
 
 - (void) SetAuxVolume:(int) volume;
 
+- (void) SetPlayVolume:(int) volume;
+
 - (void) EnableMute:(bool)bEnable;
 
 /// 开发者无需关心这几个接口，测试使用

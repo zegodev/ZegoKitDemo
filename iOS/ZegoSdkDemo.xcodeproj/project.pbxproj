@@ -19,11 +19,13 @@
 		A77025AA1C0168B1008E1FB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C706C51B70A11500DD0F07 /* Main.storyboard */; };
 		A77025AB1C0168B1008E1FB3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8C706CA1B70A11500DD0F07 /* LaunchScreen.xib */; };
 		A77025AC1C0168B1008E1FB3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8C706C81B70A11500DD0F07 /* Images.xcassets */; };
+		A7BED99B1D0805F500498D4B /* ZegoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BED9961D0805E000498D4B /* ZegoKit.framework */; };
+		A7BED99C1D0805FD00498D4B /* ZegoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BED99A1D0805E000498D4B /* ZegoKit.framework */; };
+		A7BED99D1D0805FF00498D4B /* ZegoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7BED99A1D0805E000498D4B /* ZegoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A7BED99E1D08063B00498D4B /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A73816C41CF48FD200EE2D28 /* libiconv.tbd */; };
 		B80F84C31C4C8C5A00E2550F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B80F84AD1C4B42A000E2550F /* AudioToolbox.framework */; };
 		B80F84C41C4C8C6000E2550F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B80F84B11C4B42DD00E2550F /* AVFoundation.framework */; };
 		B80F84C51C4C8C6C00E2550F /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B80F84AF1C4B42BE00E2550F /* CoreAudio.framework */; };
-		B836EB311CEEFE3D0046B796 /* ZegoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B836EB301CEEFE3D0046B796 /* ZegoKit.framework */; };
-		B836EB321CEEFE3D0046B796 /* ZegoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B836EB301CEEFE3D0046B796 /* ZegoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B85129671CAE534E00C68E85 /* a.pcm in Resources */ = {isa = PBXBuildFile; fileRef = B85129661CAE534E00C68E85 /* a.pcm */; };
 		B85129681CAE534E00C68E85 /* a.pcm in Resources */ = {isa = PBXBuildFile; fileRef = B85129661CAE534E00C68E85 /* a.pcm */; };
 		B88BC8041B817762000B9325 /* MyToast.m in Sources */ = {isa = PBXBuildFile; fileRef = B88BC8031B817762000B9325 /* MyToast.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -56,7 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B836EB321CEEFE3D0046B796 /* ZegoKit.framework in Embed Frameworks */,
+				A7BED99D1D0805FF00498D4B /* ZegoKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,10 +69,13 @@
 		A73816C41CF48FD200EE2D28 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		A77025B21C0168B1008E1FB3 /* ZegoSdkDemo-iOS7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZegoSdkDemo-iOS7.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77025B31C0168B1008E1FB3 /* ZegoSdkDemo-Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ZegoSdkDemo-Dev-Info.plist"; path = "/Users/randyqiu/dev/avroom_sdk/projects/ios/ZegoSdkDemo/ZegoSdkDemo-Dev-Info.plist"; sourceTree = "<absolute>"; };
+		A7BED9941D0805E000498D4B /* ZegoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZegoKit.framework; sourceTree = "<group>"; };
+		A7BED9961D0805E000498D4B /* ZegoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZegoKit.framework; sourceTree = "<group>"; };
+		A7BED9981D0805E000498D4B /* ZegoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZegoKit.framework; sourceTree = "<group>"; };
+		A7BED99A1D0805E000498D4B /* ZegoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZegoKit.framework; sourceTree = "<group>"; };
 		B80F84AD1C4B42A000E2550F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		B80F84AF1C4B42BE00E2550F /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		B80F84B11C4B42DD00E2550F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		B836EB301CEEFE3D0046B796 /* ZegoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZegoKit.framework; path = "libs/Release-iphoneosAndRelease-iphonesimulator/ZegoKit.framework"; sourceTree = "<group>"; };
 		B85129661CAE534E00C68E85 /* a.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = a.pcm; sourceTree = "<group>"; };
 		B88BC8021B817762000B9325 /* MyToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyToast.h; sourceTree = "<group>"; };
 		B88BC8031B817762000B9325 /* MyToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyToast.m; sourceTree = "<group>"; };
@@ -99,6 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7BED99E1D08063B00498D4B /* libiconv.tbd in Frameworks */,
+				A7BED99B1D0805F500498D4B /* ZegoKit.framework in Frameworks */,
 				B80F84C51C4C8C6C00E2550F /* CoreAudio.framework in Frameworks */,
 				B80F84C41C4C8C6000E2550F /* AVFoundation.framework in Frameworks */,
 				B80F84C31C4C8C5A00E2550F /* AudioToolbox.framework in Frameworks */,
@@ -110,21 +117,72 @@
 			buildActionMask = 2147483647;
 			files = (
 				A73816C51CF48FD200EE2D28 /* libiconv.tbd in Frameworks */,
-				B836EB311CEEFE3D0046B796 /* ZegoKit.framework in Frameworks */,
+				A7BED99C1D0805FD00498D4B /* ZegoKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B8C706AF1B70A11500DD0F07 = {
+		A7BED9921D0805E000498D4B /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				A7BED9931D0805E000498D4B /* iOS7Static-iphoneos */,
+				A7BED9951D0805E000498D4B /* iOS7Static-iphoneosAndRelease-iphonesimulator */,
+				A7BED9971D0805E000498D4B /* Release-iphoneos */,
+				A7BED9991D0805E000498D4B /* Release-iphoneosAndRelease-iphonesimulator */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		A7BED9931D0805E000498D4B /* iOS7Static-iphoneos */ = {
+			isa = PBXGroup;
+			children = (
+				A7BED9941D0805E000498D4B /* ZegoKit.framework */,
+			);
+			path = "iOS7Static-iphoneos";
+			sourceTree = "<group>";
+		};
+		A7BED9951D0805E000498D4B /* iOS7Static-iphoneosAndRelease-iphonesimulator */ = {
+			isa = PBXGroup;
+			children = (
+				A7BED9961D0805E000498D4B /* ZegoKit.framework */,
+			);
+			path = "iOS7Static-iphoneosAndRelease-iphonesimulator";
+			sourceTree = "<group>";
+		};
+		A7BED9971D0805E000498D4B /* Release-iphoneos */ = {
+			isa = PBXGroup;
+			children = (
+				A7BED9981D0805E000498D4B /* ZegoKit.framework */,
+			);
+			path = "Release-iphoneos";
+			sourceTree = "<group>";
+		};
+		A7BED9991D0805E000498D4B /* Release-iphoneosAndRelease-iphonesimulator */ = {
+			isa = PBXGroup;
+			children = (
+				A7BED99A1D0805E000498D4B /* ZegoKit.framework */,
+			);
+			path = "Release-iphoneosAndRelease-iphonesimulator";
+			sourceTree = "<group>";
+		};
+		A7BED99F1D08070300498D4B /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				A73816C41CF48FD200EE2D28 /* libiconv.tbd */,
-				B836EB301CEEFE3D0046B796 /* ZegoKit.framework */,
+				A7BED9921D0805E000498D4B /* libs */,
 				B80F84B11C4B42DD00E2550F /* AVFoundation.framework */,
 				B80F84AF1C4B42BE00E2550F /* CoreAudio.framework */,
 				B80F84AD1C4B42A000E2550F /* AudioToolbox.framework */,
+			);
+			name = frameworks;
+			sourceTree = "<group>";
+		};
+		B8C706AF1B70A11500DD0F07 = {
+			isa = PBXGroup;
+			children = (
+				A7BED99F1D08070300498D4B /* frameworks */,
 				B8C706BA1B70A11500DD0F07 /* ZegoSdkDemo */,
 				B8C706B91B70A11500DD0F07 /* Products */,
 			);
@@ -229,6 +287,7 @@
 					B8C706B71B70A11500DD0F07 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = 3WR2G89LR2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -339,7 +398,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/libs/Release-iphoneosAndRelease-iphonesimulator",
+					"$(PROJECT_DIR)/libs/iOS7Static-iphoneosAndRelease-iphonesimulator",
 				);
 				INFOPLIST_FILE = "ZegoSdkDemo-Dev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -347,7 +406,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Zego.ZegoSdkDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0cd0d267-9c2f-4262-94ea-2f225adf1e98";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
@@ -363,18 +422,114 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/libs/Release-iphoneosAndRelease-iphonesimulator",
+					"$(PROJECT_DIR)/libs/iOS7Static-iphoneosAndRelease-iphonesimulator",
 				);
 				INFOPLIST_FILE = "ZegoSdkDemo-Dev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Zego.ZegoSdkDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0cd0d267-9c2f-4262-94ea-2f225adf1e98";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
+		};
+		AE8DA6201D1A9020007A9FBE /* iOS7Static */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = ZegoSdkDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: dev@zego.im (8L68VGHL24)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: dev@zego.im (8L68VGHL24)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "d503ffd0-395c-4cfd-83cf-d96a6ca1eee6";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = iOS7Static;
+		};
+		AE8DA6211D1A9020007A9FBE /* iOS7Static */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: jiang ningbo (SQL7DB2NFY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/Release-iphoneosAndRelease-iphonesimulator",
+				);
+				INFOPLIST_FILE = ZegoSdkDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Zego.ZegoSdkDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s arm64";
+			};
+			name = iOS7Static;
+		};
+		AE8DA6221D1A9020007A9FBE /* iOS7Static */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: jiang ningbo (SQL7DB2NFY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jiang ningbo (SQL7DB2NFY)";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/iOS7Static-iphoneosAndRelease-iphonesimulator",
+				);
+				INFOPLIST_FILE = "ZegoSdkDemo-Dev-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Zego.ZegoSdkDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s arm64";
+			};
+			name = iOS7Static;
 		};
 		B8C706D91B70A11500DD0F07 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -472,11 +627,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer: jiang ningbo (SQL7DB2NFY)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jiang ningbo (SQL7DB2NFY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/libs/Release-iphoneos",
 					"$(PROJECT_DIR)/libs/Release-iphoneosAndRelease-iphonesimulator",
 				);
 				INFOPLIST_FILE = ZegoSdkDemo/Info.plist;
@@ -486,7 +640,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Zego.ZegoSdkDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
@@ -497,11 +651,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Zego Technology Co. Ltd.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen Zego Technology Co. Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/libs/Release-iphoneos",
 					"$(PROJECT_DIR)/libs/Release-iphoneosAndRelease-iphonesimulator",
 				);
 				INFOPLIST_FILE = ZegoSdkDemo/Info.plist;
@@ -509,8 +662,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Zego.ZegoSdkDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "18659867-205d-4997-a04c-7aa64dc785ae";
-				TARGETED_DEVICE_FAMILY = 1;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
@@ -522,6 +675,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A77025B01C0168B1008E1FB3 /* Debug */,
+				AE8DA6221D1A9020007A9FBE /* iOS7Static */,
 				A77025B11C0168B1008E1FB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -531,6 +685,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8C706D91B70A11500DD0F07 /* Debug */,
+				AE8DA6201D1A9020007A9FBE /* iOS7Static */,
 				B8C706DA1B70A11500DD0F07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -540,6 +695,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8C706DC1B70A11500DD0F07 /* Debug */,
+				AE8DA6211D1A9020007A9FBE /* iOS7Static */,
 				B8C706DD1B70A11500DD0F07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

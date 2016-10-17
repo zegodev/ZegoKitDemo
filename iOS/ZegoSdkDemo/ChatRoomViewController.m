@@ -403,13 +403,13 @@
             return;
         }
         
-        pPos = pPos + *pDataLen;
-
+        
         *pSampleRate = 44100;
         *pNumChannels = 2;
         *pBitDepth = 16;
             
         memcpy(pDataOut, pPos, *pDataLen);
+		pPos = pPos + *pDataLen;
     }
 }
 
