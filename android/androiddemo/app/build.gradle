@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+    android {
+        compileSdkVersion 23
+        buildToolsVersion "23.0.2"
+
+        defaultConfig {
+            applicationId "com.zego.zegosdkdemo"
+            minSdkVersion 15
+            targetSdkVersion 23
+            versionCode 1
+            versionName "1.0"
+
+            multiDexEnabled true
+        }
+
+
+        signingConfigs {
+            release {
+                storeFile file("../../config/your_app_key.jks")
+                storePassword "your_keystore_password"
+                keyAlias "your_key_alias"
+                keyPassword "your_key_password"
+            }
+        }
+
+        buildTypes {
+            debug {
+                buildConfigField "boolean", "LOG_DEBUG", "true"
+                versionNameSuffix "-debug"
+
+            }
+            release {
+                buildConfigField "boolean", "LOG_DEBUG", "false"
+                signingConfig signingConfigs.release
+//            minifyEnabled true
+//            zipAlignEnabled true
+//            shrinkResources true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
+        }
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_7
+            targetCompatibility JavaVersion.VERSION_1_7
+        }
+
+        sourceSets {
+            main {
+                jniLibs.srcDirs = ['libs']
+            }
+        }
+    }
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+}
+
