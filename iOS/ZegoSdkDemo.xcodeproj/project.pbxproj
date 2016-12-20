@@ -39,6 +39,8 @@
 		B8C706EC1B70BBEA00DD0F07 /* CoolxSdkDemoHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C706E51B70BBEA00DD0F07 /* CoolxSdkDemoHelp.m */; };
 		B8C706EE1B70BBEA00DD0F07 /* NotificationEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C706E91B70BBEA00DD0F07 /* NotificationEntity.m */; };
 		B8FA4D741BB8D82E00EAE359 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FA4D731BB8D82E00EAE359 /* SettingViewController.m */; };
+		EF97818C1E02A21A004404DB /* ZegoKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF97818B1E02A21A004404DB /* ZegoKitManager.m */; };
+		EF97818D1E02A21A004404DB /* ZegoKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF97818B1E02A21A004404DB /* ZegoKitManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -97,6 +99,8 @@
 		B8C706E91B70BBEA00DD0F07 /* NotificationEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationEntity.m; sourceTree = "<group>"; };
 		B8FA4D721BB8D82E00EAE359 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		B8FA4D731BB8D82E00EAE359 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		EF97818A1E02A21A004404DB /* ZegoKitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZegoKitManager.h; sourceTree = "<group>"; };
+		EF97818B1E02A21A004404DB /* ZegoKitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZegoKitManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +219,8 @@
 				B8C706BF1B70A11500DD0F07 /* AppDelegate.h */,
 				B8C706C21B70A11500DD0F07 /* ViewController.h */,
 				B8C706C31B70A11500DD0F07 /* ViewController.m */,
+				EF97818A1E02A21A004404DB /* ZegoKitManager.h */,
+				EF97818B1E02A21A004404DB /* ZegoKitManager.m */,
 				B8C706C51B70A11500DD0F07 /* Main.storyboard */,
 				B8C706C81B70A11500DD0F07 /* Images.xcassets */,
 				B8C706CA1B70A11500DD0F07 /* LaunchScreen.xib */,
@@ -282,7 +288,8 @@
 				ORGANIZATIONNAME = Zego;
 				TargetAttributes = {
 					A770259D1C0168B1008E1FB3 = {
-						DevelopmentTeam = JCBE3EC328;
+						DevelopmentTeam = 3WR2G89LR2;
+						ProvisioningStyle = Automatic;
 					};
 					B8C706B71B70A11500DD0F07 = {
 						CreatedOnToolsVersion = 6.4;
@@ -342,6 +349,7 @@
 			files = (
 				A770259F1C0168B1008E1FB3 /* ViewController.m in Sources */,
 				A77025A01C0168B1008E1FB3 /* NotificationEntity.m in Sources */,
+				EF97818D1E02A21A004404DB /* ZegoKitManager.m in Sources */,
 				A77025A11C0168B1008E1FB3 /* CoolxSdkDemoHelp.m in Sources */,
 				A77025A21C0168B1008E1FB3 /* AppDelegate.mm in Sources */,
 				A77025A31C0168B1008E1FB3 /* main.m in Sources */,
@@ -357,6 +365,7 @@
 			files = (
 				B8C706C41B70A11500DD0F07 /* ViewController.m in Sources */,
 				B8C706EE1B70BBEA00DD0F07 /* NotificationEntity.m in Sources */,
+				EF97818C1E02A21A004404DB /* ZegoKitManager.m in Sources */,
 				B8C706EC1B70BBEA00DD0F07 /* CoolxSdkDemoHelp.m in Sources */,
 				B8C706EA1B70BBEA00DD0F07 /* AppDelegate.mm in Sources */,
 				B8C706BE1B70A11500DD0F07 /* main.m in Sources */,
@@ -394,7 +403,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer: jiang ningbo (SQL7DB2NFY)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jiang ningbo (SQL7DB2NFY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3WR2G89LR2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -418,7 +428,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer: jiang ningbo (SQL7DB2NFY)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jiang ningbo (SQL7DB2NFY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3WR2G89LR2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -513,7 +524,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer: jiang ningbo (SQL7DB2NFY)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jiang ningbo (SQL7DB2NFY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3WR2G89LR2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
